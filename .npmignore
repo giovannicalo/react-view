@@ -7,6 +7,7 @@
 .npmignore
 .travis.yml
 .vscode
+babel.config.js
 coverage
 jest.config.js
 jsconfig.json
