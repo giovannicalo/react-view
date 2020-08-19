@@ -1,0 +1,46 @@
+{
+	"author": {
+		"email": "giovanni.calo@live.it",
+		"name": "Giovanni Calò",
+		"url": "https://github.com/giovannicalo"
+	},
+	"bugs": {
+		"url": "https://github.com/giovannicalo/react-view/issues"
+	},
+	"dependencies": {
+		"react": "^16.13.1",
+		"styled-components": "^5.1.1"
+	},
+	"description": "React View",
+	"devDependencies": {
+		"@babel/cli": "^7.10.5",
+		"@babel/core": "^7.11.1",
+		"@babel/preset-env": "^7.11.0",
+		"@babel/preset-react": "^7.10.4",
+		"coveralls": "^3.1.0",
+		"enzyme": "^3.11.0",
+		"enzyme-adapter-react-16": "^1.15.3",
+		"eslint": "^7.7.0",
+		"eslint-config-giovanni": "giovannicalo/eslint-config",
+		"jest": "^26.4.0",
+		"react-dom": "^16.13.1"
+	},
+	"homepage": "https://github.com/giovannicalo/react-view",
+	"keywords": ["react", "view"],
+	"license": "MIT",
+	"main": "dist/index.js",
+	"name": "react-view",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/giovannicalo/react-view.git"
+	},
+	"scripts": {
+		"build": "babel --ignore \"**/*.spec.js\" --out-dir dist source",
+		"coverage": "jest --coverageReporters=text-lcov | coveralls",
+		"lint": "eslint -f pretty .",
+		"prepublishOnly": "npm run lint && npm test && npm run build",
+		"start": "jest --watch",
+		"test": "jest"
+	},
+	"version": "0.0.0"
+}

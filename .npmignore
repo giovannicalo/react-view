@@ -1,0 +1,13 @@
+.coveralls.yml
+.editorconfig
+.eslintignore
+.eslintrc.js
+.gitattributes
+.gitignore
+.npmignore
+.travis.yml
+.vscode
+coverage
+jest.config.js
+jsconfig.json
+source
