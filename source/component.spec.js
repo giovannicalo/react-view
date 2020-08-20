@@ -12,8 +12,8 @@ it("should create a DIV element by default", () => {
 	).toBe(1);
 });
 
-it("should create the given DOM element", () => {
-	const component = mount(<View as="span" />);
+it("should create the given HTML element", () => {
+	const component = mount(<View element="span" />);
 	expect(component.find("div").length).toBe(0);
 	expect(component.find("span").length).toBe(1);
 });

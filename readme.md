@@ -41,7 +41,7 @@ const Foo = () => {
             {"Foo"}
         </Header>
         <Body>
-            <Input as="input" type="text" />
+            <Input element="input" type="text" />
         </Body>
     </Container>;
 };
@@ -55,9 +55,11 @@ export default Foo;
 
 The `View` component is meant as the fundamental building block of every application that uses it.
 
-By default, it renders a `div` element which behaves similarly to [React Native](https://github.com/facebook/react-native)'s homonymous component and has no special props of its own.
+By default, it renders a `div` element which behaves similarly to [React Native](https://github.com/facebook/react-native)'s homonymous component.
 
-It can be styled with [Styled Components](https://github.com/styled-components/styled-components), which also allows it to render different elements using the `as` prop.
+It can be styled with [Styled Components](https://github.com/styled-components/styled-components).
+
+It supports a single special prop, `element`, of type `string`, which overrides the default `div` and makes it render the given HTML element instead, e.g. `<View element="input" />` will render an `input` element. All other props are passed down to the styled component and, through that, to the DOM.
 
 ### global.debugViews
 
