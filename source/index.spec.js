@@ -1,5 +1,5 @@
+import EnzymeAdapter from "@wojtekmaj/enzyme-adapter-react-17";
 import Enzyme, { shallow } from "enzyme";
-import EnzymeAdapter from "enzyme-adapter-react-16";
 import React, { createRef } from "react";
 
 import View from ".";
