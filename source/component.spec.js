@@ -1,6 +1,5 @@
 import EnzymeAdapter from "@wojtekmaj/enzyme-adapter-react-17";
 import Enzyme, { mount, shallow } from "enzyme";
-import React from "react";
 
 import View from "./component";
 

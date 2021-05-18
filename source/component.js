@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 
 import generateDebugStyle from "./generate-debug-style";
 import Element from "./style";

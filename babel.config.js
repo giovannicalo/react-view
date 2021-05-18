@@ -5,10 +5,12 @@ module.exports = {
 				bugfixes: true,
 				shippedProposals: true,
 				targets: {
-					node: "14.8.0"
+					node: "16.1.0"
 				}
 			}]]
 		}
 	},
-	presets: ["@babel/react"]
+	presets: [["@babel/react", {
+		runtime: "automatic"
+	}]]
 };
