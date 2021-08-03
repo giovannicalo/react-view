@@ -1,4 +1,3 @@
-.coveralls.yml
 coverage
 dist
 node_modules
