@@ -1,5 +1,6 @@
 # React View
 
+[![Build Status](https://github.com/giovannicalo/react-view/actions/workflows/build.yml/badge.svg)](https://github.com/giovannicalo/react-view/actions/workflows/build.yml)
 [![Build Status](https://travis-ci.org/giovannicalo/react-view.svg?branch=master)](https://travis-ci.org/giovannicalo/react-view)
 [![Coverage Status](https://coveralls.io/repos/github/giovannicalo/react-view/badge.svg?branch=master)](https://coveralls.io/github/giovannicalo/react-view?branch=master)
 
@@ -9,7 +10,7 @@
 npm install giovannicalo/react-view
 ```
 
-> Not yet published
+> Not yet published to NPM. This will install it from GitHub.
 
 ## Usage
 
@@ -51,7 +52,7 @@ export default Foo;
 
 ## API
 
-### View
+### `View`
 
 The `View` component is meant as the fundamental building block of every application that uses it.
 
@@ -61,7 +62,7 @@ It can be styled with [Styled Components](https://github.com/styled-components/s
 
 It supports a single special prop, `element`, of type `string`, which overrides the default `div` and makes it render the given HTML element instead, e.g. `<View element="input" />` will render an `input` element. All other props are passed down to the styled component and, through that, to the DOM.
 
-### global.debugViews
+### `global.debugViews`
 
 If set to `true`, all subsequent `View`s will have random background colors.
 

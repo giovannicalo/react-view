@@ -1,8 +1,8 @@
-.coveralls.yml
 .editorconfig
 .eslintignore
 .eslintrc.js
 .gitattributes
+.github
 .gitignore
 .npmignore
 .travis.yml
