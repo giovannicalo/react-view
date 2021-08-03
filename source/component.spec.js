@@ -1,20 +1,16 @@
 import EnzymeAdapter from "@wojtekmaj/enzyme-adapter-react-17";
-import Enzyme, { mount, shallow } from "enzyme";
+import Enzyme, { render, shallow } from "enzyme";
 
 import View from "./component";
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 it("should create a DIV element by default", () => {
-	expect(
-		mount(<View />).find("div").length
-	).toBe(1);
+	expect(render(<View />).is("div")).toBeTruthy();
 });
 
 it("should create the given HTML element", () => {
-	const component = mount(<View element="span" />);
-	expect(component.find("div").length).toBe(0);
-	expect(component.find("span").length).toBe(1);
+	expect(render(<View element="span" />).is("span")).toBeTruthy();
 });
 
 it("shouldn't have a background color by default", () => {
