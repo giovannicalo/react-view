@@ -1,16 +1,9 @@
 module.exports = {
-	env: {
-		test: {
-			presets: [["@babel/env", {
-				bugfixes: true,
-				shippedProposals: true,
-				targets: {
-					node: "16.1.0"
-				}
-			}]]
-		}
-	},
-	presets: [["@babel/react", {
+	presets: [["@babel/env", {
+		bugfixes: true,
+		shippedProposals: true,
+		targets: { node: "17.9.0" }
+	}], ["@babel/react", {
 		runtime: "automatic"
 	}]]
 };
