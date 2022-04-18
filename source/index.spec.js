@@ -1,50 +1,38 @@
-import EnzymeAdapter from "@wojtekmaj/enzyme-adapter-react-17";
-import Enzyme, { mount, render, shallow } from "enzyme";
+import { render } from "@testing-library/react";
 import { createRef } from "react";
 
 import View from ".";
 
-Enzyme.configure({ adapter: new EnzymeAdapter() });
-
 it("should propagate its ref to the inner component", () => {
 	const ref = createRef();
-	mount(<View ref={ref} />);
+	render(<View ref={ref} />);
 	expect(ref.current).toBeTruthy();
 });
 
 it("should create a DIV element by default", () => {
-	expect(render(<View />).is("div")).toBeTruthy();
+	expect(render(<View />).container.firstChild.tagName).toBe("DIV");
 });
 
 it("should create the given HTML element", () => {
-	expect(render(<View element="span" />).is("span")).toBeTruthy();
+	expect(render(<View element="span" />).container.firstChild.tagName).toBe("SPAN");
 });
 
 it("shouldn't have a background color by default", () => {
-	expect(
-		shallow(<View />).prop("style")
-	).not.toHaveProperty("backgroundColor");
+	expect(render(<View />).container.firstChild.style.backgroundColor).toBeFalsy();
 });
 
 it("should have a random background color when the debug flag is set", () => {
 	global.debugViews = true;
-	expect(
-		shallow(<View />).prop("style")
-	).toHaveProperty("backgroundColor");
+	expect(render(<View />).container.firstChild.style.backgroundColor).toBeTruthy();
 	global.debugViews = false;
 });
 
 it("should propagate its props to the inner element", () => {
-	const component = shallow(<View
-		className="foo"
-		style={{ color: "#000000" }}
-	/>);
-	expect(component.prop("className")).toBe("foo");
-	expect(component.prop("style")).toHaveProperty("color", "#000000");
+	expect(render(<View className="foo" />).container.firstChild.className).toContain("foo");
 });
 
 it("should render the given children", () => {
-	expect(shallow(<View>
+	expect(render(<View>
 		<span />
-	</View>).contains(<span />)).toBeTruthy();
+	</View>).container.firstChild.firstChild.tagName).toBe("SPAN");
 });
