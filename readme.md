@@ -15,7 +15,6 @@ npm install giovannicalo/react-view
 ## Usage
 
 ```javascript
-import React from "react";
 import View from "react-view";
 import styled from "styled-components";
 
