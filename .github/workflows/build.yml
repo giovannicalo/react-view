@@ -6,7 +6,7 @@ jobs:
     - name: Install Node
       uses: actions/setup-node@v2.3.0
       with:
-        node-version: 17.9.0
+        node-version: 18.9.0
     - name: Configure Git
       run: git config --global core.autocrlf input
     - name: Checkout code
@@ -17,7 +17,7 @@ jobs:
       run: npm run lint
     - name: Test
       run: npm test
-    - if: ${{matrix.os == 'ubuntu-20.04'}}
+    - if: matrix.os == 'ubuntu-20.04'
       name: Test coverage
       uses: coverallsapp/github-action@1.1.3
       with:
