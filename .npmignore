@@ -5,8 +5,6 @@
 .github
 .gitignore
 .npmignore
-.travis.yml
-.vscode
 babel.config.js
 coverage
 jest.config.js

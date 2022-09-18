@@ -1,7 +1,6 @@
 # React View
 
 [![Build Status](https://github.com/giovannicalo/react-view/actions/workflows/build.yml/badge.svg)](https://github.com/giovannicalo/react-view/actions/workflows/build.yml)
-[![Build Status](https://app.travis-ci.com/giovannicalo/react-view.svg?branch=master)](https://app.travis-ci.com/giovannicalo/react-view)
 [![Coverage Status](https://coveralls.io/repos/github/giovannicalo/react-view/badge.svg?branch=master)](https://coveralls.io/github/giovannicalo/react-view?branch=master)
 
 ## Installation
