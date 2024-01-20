@@ -20,7 +20,7 @@
 		"jest-environment-jsdom": "^29.2.1"
 	},
 	"engines": {
-		"node": ">=19.0.0"
+		"node": ">=21.6.0"
 	},
 	"homepage": "https://github.com/giovannicalo/react-view",
 	"keywords": ["react", "view"],
