@@ -1,7 +1,7 @@
 import generateRandomColor from "./generate-random-color";
 
 const generateDebugStyle = () => {
-	return global.debugViews ? {
+	return window.debugViews ? {
 		backgroundColor: generateRandomColor()
 	} : {};
 };

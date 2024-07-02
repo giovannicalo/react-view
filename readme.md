@@ -60,10 +60,12 @@ It can be styled with [Styled Components](https://github.com/styled-components/s
 
 It supports a single special prop, `element`, of type `string`, which overrides the default `div` and makes it render the given HTML element instead, e.g. `<View element="input" />` will render an `input` element. All other props are passed down to the styled component and, through that, to the DOM.
 
-### `global.debugViews`
+### `window.debugViews`
 
 If set to `true`, all subsequent `View`s will have random background colors.
 
 This sometimes helps better visualize the CSS box model and can make building layouts easier.
+
+It has no effect if changed at runtime.
 
 If left unset, it has a negligible effect on performance (about 0.001-0.005 ms per component).

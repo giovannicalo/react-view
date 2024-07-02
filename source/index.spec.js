@@ -1,4 +1,4 @@
-/* @jest-environment jsdom */ // eslint-disable-line jsdoc/no-bad-blocks
+/* global window */
 
 import { render } from "@testing-library/react";
 import { createRef } from "react";
@@ -24,9 +24,9 @@ it("shouldn't have a background color by default", () => {
 });
 
 it("should have a random background color when the debug flag is set", () => {
-	global.debugViews = true;
+	window.debugViews = true;
 	expect(render(<View />).container.firstChild.style.backgroundColor).toBeTruthy();
-	global.debugViews = false;
+	window.debugViews = false;
 });
 
 it("should propagate its props to the inner element", () => {
