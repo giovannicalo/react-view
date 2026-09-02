@@ -9,15 +9,15 @@
 	},
 	"description": "React View",
 	"devDependencies": {
-		"@babel/cli": "^7.27.1",
-		"@babel/core": "^7.27.1",
-		"@babel/preset-env": "^7.27.1",
-		"@babel/preset-react": "^7.27.1",
-		"@testing-library/react": "^16.3.0",
-		"eslint": "^9.25.1",
+		"@babel/cli": "^8.0.4",
+		"@babel/core": "^8.0.1",
+		"@babel/preset-env": "^8.0.2",
+		"@babel/preset-react": "^8.0.1",
+		"@testing-library/react": "^16.3.3",
+		"eslint": "^9.39.5",
 		"eslint-config-giovanni": "giovannicalo/eslint-config",
-		"jest": "^29.7.0",
-		"jest-environment-jsdom": "^29.7.0"
+		"jest": "^30.5.1",
+		"jest-environment-jsdom": "^30.5.1"
 	},
 	"engines": {
 		"node": ">=26.8.1"
@@ -28,8 +28,8 @@
 	"main": "build/index.js",
 	"name": "react-view",
 	"peerDependencies": {
-		"react": "^19.1.0",
-		"styled-components": "^6.1.17"
+		"react": "^19.2.8",
+		"styled-components": "^6.5.3"
 	},
 	"repository": {
 		"type": "git",
